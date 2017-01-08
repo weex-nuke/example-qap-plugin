@@ -1,0 +1,34 @@
+.listContainer{
+    flex:1;
+}
+.cellItemList{
+    background-color:#ffffff;
+    height:110rem;
+    border-bottom:2rem solid #e8e8e8;
+    padding-left:30rem;
+    align-items:center;
+    flex-direction:row;
+}
+.itemTextList{
+    font-size:30rem;
+    color:#5F646E;
+}
+.refresh{
+    height:80rem;
+    width:750rem;
+    background-color:#cccccc;
+    justify-content:center;
+    align-items:center;
+};
+.loading{
+    height:80rem;
+    display:flex;
+    width:750rem;
+    flex-direction:row;
+    background-color:#cccccc;
+    align-items:center;
+    justify-content:center
+};
+.loadingText{
+    color:#666666
+}

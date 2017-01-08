@@ -1,0 +1,53 @@
+
+
+
+
+.orderContainer {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    border-bottom: 0.5px solid #cccccc;
+}
+.picWrap {
+    width: 200rem;
+    height: 220rem;
+    padding-top:20rem;
+    padding-left:20rem;
+    // flex: 2;
+}
+.pic {
+    width: 180rem;
+    
+    height: 180rem;
+   
+}
+
+.titleWrap {
+    flex: 5;
+    padding-top:20rem;
+    padding-left:20rem;
+}
+
+.subWrap {
+    width: 180rem;
+    padding-top:20rem;
+    padding-left:20rem;
+    padding-right:20rem;
+    text-align: right;
+}
+.title{
+    lines:5;
+    color: #333333;
+    // font-weight:bold;
+    font-size:28rem;
+    line-height: 34rem;
+}
+
+.price{
+    color:#999999;
+}
+.num{
+    color:#999999;
+}
+

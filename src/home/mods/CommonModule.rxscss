@@ -1,0 +1,41 @@
+@import "../../lib/base.rxscss";
+
+container {
+    backgroundColor: #fff;
+    flexDirection: row;
+    // alignItems: center;
+    // justifyContent: center;
+    height: 200rem;
+    // paddingTop: 20;
+    // paddingBottom: 20;
+}
+.item{
+    height: 200rem;
+    width: 150rem;
+    alignItems: center;
+    justifyContent: center;
+    // padding-top: 20;
+    // paddingBottom: 20;
+}
+itemStyle {
+    borderTopWidth: 1px;
+    borderTopStyle: solid;
+    borderTopColor: #ccc;
+}
+icon {
+    fontSize: 24;
+}
+badge {
+    position: absolute;
+    width: 20;
+    height: 20;
+    borderRadius: 10;
+    right: 16;
+    top: 20;
+    backgroundColor: red;
+    color: #fff;
+    alignItems: center;
+    justifyContent: center;
+    display: flex;
+
+}

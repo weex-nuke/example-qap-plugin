@@ -1,0 +1,17 @@
+@import "../../lib/base.rxscss";
+container {
+    backgroundColor: #ffffff;
+    flexDirection: row;
+    alignItems: center;
+    paddingLeft: 10;
+    paddingTop: 10;
+    paddingBottom: 10;
+    height: 80;
+    borderBottom: 1px solid #cccccc;
+}
+img {
+    width: 60;
+    height: 60;
+    borderRadius: 30;
+    marginRight: 10;
+}

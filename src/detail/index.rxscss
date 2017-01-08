@@ -1,0 +1,128 @@
+$fontSize:30rem;
+.detail{
+    
+    background-color: #cccccc;
+}
+.orderContainer {
+    background-color: #ffffff;
+    padding-left:20rem;
+    padding-right:20rem;
+    margin-bottom:20rem;
+}
+.addressContainer{
+    background-color: #ffffff;
+    border-top:1px solid #cccccc;
+    padding-left:20rem;
+    padding-right:20rem;
+    margin-bottom:20rem;
+}
+
+.listLine{
+    flex-direction: row;
+    
+    border-bottom:1px solid #cccccc;
+    // line-height: 48rem
+    
+}
+.listLineLast{
+    border-bottom:0px solid #cccccc;
+}
+.subhead{
+    // justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 78rem;
+    // border-bottom:1px solid #cccccc;
+}
+.icon1{
+    font-size: 34rem;
+    margin-right: 18rem;
+    color: #EB7E10;
+}
+.btnLine{
+    padding:20px 0;
+}
+.listLabel{
+    flex:3;
+    height: 70rem;
+    justify-content: center;
+    align-items: center;
+}
+.listLabelText{
+    font-size: $fontSize;
+}
+.listContent{
+    flex:8;
+    justify-content: center;
+    height: 68rem;
+}
+.listContentText{
+    font-size: $fontSize;
+}
+
+.address{
+    flex:8;
+    justify-content: center;
+    padding:12rem 0;
+    // align-items: center;
+    //  min-height: 68rem;
+     line-height: 24rem;
+     lines:5;
+    font-size: $fontSize;
+}
+.itemContainer {
+    background-color: #ffffff;
+    border-top:1px solid #cccccc;
+   
+    margin-bottom:100rem;
+}
+.itemLine {
+    flex-direction: row;
+    border-bottom:1px solid #cccccc;
+    padding-bottom:30rem;
+}
+.picWrap {
+    width: 200rem;
+    height: 200rem;
+    padding-top:20rem;
+    padding-left:20rem;
+}
+.pic {
+    width: 180rem;
+    height: 180rem;
+   
+}
+
+.titleWrap {
+   flex: 5;
+    padding-top:20rem;
+    padding-left:20rem;
+}
+
+.subWrap {
+    width: 180rem;
+    padding-top:20rem;
+    padding-left:20rem;
+    padding-right:20rem;
+    text-align: right;
+}
+.title{
+    lines:5;
+    color: #333333;
+    font-size:$fontSize;
+}
+
+.price{
+    color:#999999;
+}
+.num{
+    color:#999999;
+}
+.floatBottom{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 750rem;
+    height: 80rem;
+
+}

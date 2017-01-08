@@ -1,0 +1,33 @@
+@import "../../lib/base.rxscss";
+
+container {
+    backgroundColor: #fff;
+    flexDirection: row;
+    alignItems: center;
+    justifyContent: flex-start;
+    paddingTop: 20;
+    flexWrap: wrap;
+    marginTop: 10;
+}
+itemStyle {
+    borderTopWidth: 1px;
+    borderTopStyle: solid;
+    borderTopColor: #ccc;
+}
+icon {
+    fontSize: 32;
+    color: #fff;
+}
+module {
+    width: 93.75;
+    alignItems: center;
+    marginBottom: 20;
+}
+item {
+    padding: 5;
+    borderRadius: 10;
+    marginBottom: 5;
+}
+subtitle{
+    border-bottom:1px solid #ccc;
+}

@@ -1,0 +1,29 @@
+{
+
+    "item":{
+        "pic_path": "https://gd3.alicdn.com/imgextra/i3/179209434/TB2B98sXqzyQeBjSszfXXX7OVXa_!!179209434.jpg",
+        "title" : "高端纯手工茧型韩版宽松双排扣中长款双面羊毛羊绒大衣毛呢外套女",
+        "price" : "10000.00",
+        "num" :1
+    },
+    "buyer":{
+
+        "nick" : "fwefwef啊",
+        "phone" : "18612345678",
+        "addr" : "浙江省杭州市余杭区文一西路969号8号楼",
+        "note" : "今天一定要发货哦"
+    },
+    "order":{
+        "order_id" : "123423232432432",
+        "submit_time" : "2016-11-11 23:22:22",
+        "pay_time" : "2016-11-11 23:22:22",
+        "status": "已付款"
+    },
+    
+    
+    
+    
+    
+    "total_fee" : "100.00"
+    
+}

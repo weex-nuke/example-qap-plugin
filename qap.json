@@ -1,0 +1,36 @@
+{
+	"appKey":"23589095",
+	"version":"1.0",
+	"pages":[
+		{
+			"default":true,
+			"cabability":"itemChoose",
+			"url":"qap://index.js"
+		},
+		{
+			"url":"qap://home/index.js"
+		},
+		{
+			"url":"qap://detail/index.js"
+		},
+		{
+			"url":"qap://order/index.js"
+		},
+		{
+			"url":"qap://setting/index.js"
+		},
+		{
+			"url":"qap://msg/index.js"
+		},
+		{
+			"url":"qap://evaluate/index.js"
+		}
+	],
+	"iconfonts":[
+		{
+			"localpath":"font_1474198576_7440977.ttf",
+			"url":"http://at.alicdn.com/t/font_1474198576_7440977.ttf"
+		}
+	],
+	"WebRootPath":"https://www.taobao.com/"
+}

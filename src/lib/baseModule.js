@@ -5,7 +5,7 @@ import {uuid} from './util';
 export default class BaseModule extends Component {
     constructor(props) {
         super(props);
-        this.__moduleSignature = uuid();
+        this.__moduleUUID___ = uuid();
     }
 
     __eventsCtrl(bind) {

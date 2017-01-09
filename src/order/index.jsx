@@ -1,15 +1,16 @@
 'use strict';
 import {createElement} from 'weex-rx';
 import {mount} from 'nuke-mounter';
-import BaseModule from '$root/lib/baseModule';
+import PerfModule from '$root/lib/perf';
 import {View, Text, Modal, Tabbar} from 'nuke';
 import IconFont from '$root/components/icon/iconFont';
 import tradeType from '$root/modules/common/tradeType';
 import OrderList from './mods/orderlist';
 
-class Order extends BaseModule {
+class Order extends PerfModule {
     constructor(props) {
         super(props);
+        console.log(this)
     }
 
     state = {
@@ -20,10 +21,17 @@ class Order extends BaseModule {
 
     events = {
         'app.changeOrderSubModule': (status) => {
-            console.log(status)
             this.setState({activeKey: {key: status}})
         }
     }
+
+    // componentDidUpdate(prevProps, prevState) {
+    //     console.log('order componentDidUpdate');
+    // }
+    //
+    // componentWillUpdate(nextProps, nextState) {
+    //
+    // }
 
     componentWillMount() {
         this.bindEvent();
@@ -31,6 +39,14 @@ class Order extends BaseModule {
 
     componentDidMount() {
         this.emitEvent('app.orderModuleHasReady', true);
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return true
+    }
+
+    onChange(tab) {
+        this.setState({activeKey: {key: tab.next}})
     }
 
     menus = tradeType
@@ -47,7 +63,7 @@ class Order extends BaseModule {
                             <Text style={color}>{menu.title}</Text>
                         </View>
                     )
-                }} title={menu.title} tabKey={menu.name} src={menu.src}>
+                }} title={menu.title} tabKey={menu.name} src={menu.src} >
                 <OrderList type={menu.name}/>
                 </Tabbar.Item>
             )
@@ -56,7 +72,7 @@ class Order extends BaseModule {
 
     render() {
         return (
-            <Tabbar navTop={true} activeKey={this.state.activeKey} itemStyle={style.itemStyle}>
+            <Tabbar asFramework={true} navTop={true} activeKey={this.state.activeKey} itemStyle={style.itemStyle} onChange={this.onChange.bind(this)}>
                 {this.getTabbarItem()}
             </Tabbar>
         );

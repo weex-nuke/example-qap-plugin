@@ -43,7 +43,7 @@ class OrderList extends Component {
         //     fail && fail(typeof error === 'string' ? JSON.parse(error) : error);
         // });
         // normalOrderList bigOrderList
-        fetch('normalOrderList').then(res => {
+        fetch('bigOrderList').then(res => {
             if(res && res.datas){
 
 

@@ -4,10 +4,3 @@ export const uuid = function() {
         return (prefix || 'UUID') + '-' + (begin++).toString(16).toUpperCase()
     }
 }
-
-// export const getUrl = function(url, query) {
-//     if(!query){
-//         return ;
-//     }
-//     url.match(/\?/) && (url = url +
-// }

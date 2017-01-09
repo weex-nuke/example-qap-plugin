@@ -12,10 +12,9 @@ class CommonModule extends BaseModule {
     }
 
     menus = tradeType.map(item => Object.assign(item, {count: 0}))
-
     press(name) {
-        this.emitEvent('app.changeTabbarModule', {nav: 'order', tradeStatus: name});
-        this.emitEvent('app.changeOrderSubModule', {sticky: true, tradeStatus: name});
+        this.emitEvent('app.changeToOrderModule', {nav: 'order', tradeStatus: name});
+        this.emitEvent('app.changeOrderSubModule', name);
     }
 
     renderEnterance() {
@@ -24,7 +23,7 @@ class CommonModule extends BaseModule {
                 <TouchableHighlight style={styles.item} onPress={this.press.bind(this, item.name)}>
                     <View>
                         <IconFont iconStyle={styles.icon} name={item.icon}/>
-                        
+
                     </View>
                     <Text style={styles.badge}>{item.count}</Text>
                     <Text style={styles.f1}>{item.title}</Text>

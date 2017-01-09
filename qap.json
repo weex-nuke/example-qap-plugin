@@ -15,15 +15,6 @@
 		},
 		{
 			"url":"qap://order/index.js"
-		},
-		{
-			"url":"qap://setting/index.js"
-		},
-		{
-			"url":"qap://msg/index.js"
-		},
-		{
-			"url":"qap://evaluate/index.js"
 		}
 	],
 	"iconfonts":[

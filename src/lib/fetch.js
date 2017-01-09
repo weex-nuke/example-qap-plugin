@@ -3,7 +3,7 @@ import bizApi from './bizApi';
 import { Util } from 'nuke';
 const Location = Util.Location;
 function fetch(api, query) {
-    let url =   bizApi[api];
+    let url = Location.protocol + '//' + Location.hostname + ':8080' + bizApi[api];
     query && (url = url + '?' + QN.uri.toQueryString(query));
     return QN.fetch(url, {
         method: 'POST',

@@ -1,53 +1,63 @@
-
-
-
-
 .orderContainer {
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: column;
     justify-content: space-between;
-    border-bottom: 0.5px solid #cccccc;
+    padding: 5;
+    border-bottom: 5px solid #dddddd;
+    background: #fff;
 }
-.picWrap {
-    width: 200rem;
-    height: 220rem;
-    padding-top:20rem;
-    padding-left:20rem;
-    // flex: 2;
+.avatar{
+    width: 16;
+    height: 16;
 }
-.pic {
-    width: 180rem;
-    
-    height: 180rem;
-   
+.success{
+    font-size: 12;
+    color: #0bb951;
 }
-
-.titleWrap {
-    flex: 5;
-    padding-top:20rem;
-    padding-left:20rem;
+.close{
+    font-size: 12;
+    color: #cb1515;
 }
-
-.subWrap {
-    width: 180rem;
-    padding-top:20rem;
-    padding-left:20rem;
-    padding-right:20rem;
-    text-align: right;
+.orderId{
+margin-left: 5;
 }
-.title{
-    lines:5;
+.rowlayout{
+    flex-direction: row;
+    padding-bottom: 5;
+    border-bottom: 0.5px solid #eeeeee;
+    margin-bottom: 5;
+    flex: 1;
+}
+.itemLayout{
+    flex: 1;
+}
+.row{
+    flex-direction: row;
+    align-items: center;
+}
+.minor{
+    color: #999999;
+    font-size: 12;
+}
+.primary{
     color: #333333;
-    // font-weight:bold;
-    font-size:28rem;
-    line-height: 34rem;
+    font-size: 12;
 }
-
-.price{
-    color:#999999;
+.itemPrice{
+    width: 80;
 }
-.num{
-    color:#999999;
+.userPay{
+    justify-content: space-between;
 }
-
+.pic{
+    width: 86;
+    height: 86;
+    flex: none;
+}
+.itemInfo{
+    padding-left: 5;
+    padding-right: 5;
+}
+.itemTitle{
+    padding-bottom: 5;
+}

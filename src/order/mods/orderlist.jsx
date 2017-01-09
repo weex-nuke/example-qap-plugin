@@ -27,35 +27,36 @@ class OrderList extends Component {
 
     }
     getData(){
-        Top('taobao.trades.sold.get',{
-            type: 'fixed,auction,guarantee_trade,step,independent_simple_trade,independent_shop_trade,auto_delivery,ec,cod,game_equipment,shopex_trade,netcn_trade,external_trade,instant_trade,b2c_cod,hotel_trade,super_market_trade,super_market_cod_trade,taohua,waimai,o2o_offlinetrade,nopaid,step,eticket,tmall_i18n,nopaid,insurance_plus,finance,pre_auth_type',
-            fields: 'seller_nick,buyer_nick,title,type,created,tid,seller_rate,buyer_rate,status,payment,discount_fee,adjust_fee,post_fee,total_fee,pay_time,end_time,modified,consign_time,buyer_obtain_point_fee,point_fee,real_point_fee,received_payment,commission_fee,buyer_memo,seller_memo,alipay_no,buyer_message,pic_path,num_iid,num,price,cod_fee,cod_status,shipping_type, is_daixiao,is_part_consign,consign_interval,arrive_interval,arrive_cut_time,orders, trade_from,credit_card_fee'
-		    
-        }).then(data => {
-            this.setState({
-                data: data.trades_sold_get_response.trades.trade,
-                
-                isRefreshing: false,
-                refreshText: '↓ 下拉刷新',
-            })
-        }, error => {
-            console.warn('get data fail',error);
-            fail && fail(typeof error === 'string' ? JSON.parse(error) : error);
-        });
-        fetch('orderList').then(res => {
+        // Top('taobao.trades.sold.get',{
+        //     type: 'fixed,auction,guarantee_trade,step,independent_simple_trade,independent_shop_trade,auto_delivery,ec,cod,game_equipment,shopex_trade,netcn_trade,external_trade,instant_trade,b2c_cod,hotel_trade,super_market_trade,super_market_cod_trade,taohua,waimai,o2o_offlinetrade,nopaid,step,eticket,tmall_i18n,nopaid,insurance_plus,finance,pre_auth_type',
+        //     fields: 'seller_nick,buyer_nick,title,type,created,tid,seller_rate,buyer_rate,status,payment,discount_fee,adjust_fee,post_fee,total_fee,pay_time,end_time,modified,consign_time,buyer_obtain_point_fee,point_fee,real_point_fee,received_payment,commission_fee,buyer_memo,seller_memo,alipay_no,buyer_message,pic_path,num_iid,num,price,cod_fee,cod_status,shipping_type, is_daixiao,is_part_consign,consign_interval,arrive_interval,arrive_cut_time,orders, trade_from,credit_card_fee'
+		//
+        // }).then(data => {
+        //     this.setState({
+        //         data: data.trades_sold_get_response.trades.trade,
+        //
+        //         isRefreshing: false,
+        //         refreshText: '↓ 下拉刷新',
+        //     })
+        // }, error => {
+        //     console.warn('get data fail',error);
+        //     fail && fail(typeof error === 'string' ? JSON.parse(error) : error);
+        // });
+        // normalOrderList bigOrderList
+        fetch('normalOrderList').then(res => {
             if(res && res.datas){
 
-            
+
             this.setState({
                 data: res.datas,
-                
+
                 isRefreshing: false,
                 refreshText: '↓ 下拉刷新',
             })
             }else{
                 //empty data
             }
-            
+
         })
     }
     handleRefresh = (e) => {
@@ -115,11 +116,11 @@ class OrderList extends Component {
            <ListView
             renderHeader={this.renderHeader}
             renderFooter={this.renderFooter}
-            renderRow={this.renderItem} 
+            renderRow={this.renderItem}
             dataSource={this.state.data}
 
             style={styles.listContainer}
-            onEndReached={this.handleLoadMore.bind(this)} 
+            onEndReached={this.handleLoadMore.bind(this)}
           />
 
         )

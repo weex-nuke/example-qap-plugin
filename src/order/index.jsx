@@ -20,17 +20,17 @@ class Order extends BaseModule {
 
     events = {
         'app.changeOrderSubModule': (status) => {
+            console.log(status)
             this.setState({activeKey: {key: status}})
         }
     }
 
     componentWillMount() {
-        // this.bindEvent();
-        // this.emitEvent('app.orderModuleHasReady', true);
+        this.bindEvent();
     }
 
     componentDidMount() {
-        // this.emitEvent('app.orderModuleHasReady', true);
+        this.emitEvent('app.orderModuleHasReady', true);
     }
 
     menus = tradeType

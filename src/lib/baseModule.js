@@ -20,6 +20,7 @@ export default class BaseModule extends Component {
                 error(error) {console.log(error)},
                 notify(data) {evts[evt](data)}
             });
+            console.log('bind event: ', evt, ' success');
         }
     }
 
@@ -33,5 +34,6 @@ export default class BaseModule extends Component {
 
     emitEvent(key, data, cb) {
         QAP.emit(key, data, cb);
+        console.log('emit event: ', key, ' success');
     }
 }

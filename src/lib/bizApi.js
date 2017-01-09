@@ -1,5 +1,6 @@
 export default {
     userInfo: '/data/home.userinfo.json',
-    orderList: '/data/order.list.json',
+    bigOrderList: '/data/order.list.big.json',
+    normalOrderList: '/data/order.list.normal.json',
     orderDetail: '/data/detail.detail.json'
 }

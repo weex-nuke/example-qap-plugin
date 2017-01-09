@@ -3,8 +3,8 @@ import {mount} from 'nuke-mounter';
 import {createElement, Component} from 'weex-rx';
 import {View, Text, Modal, Tabbar} from 'nuke';
 import BaseModule from '$root/lib/baseModule';
-import QAP from 'QAP-SDK';
 import IconFont from '$root/components/icon/iconFont';
+// import QAP from 'QAP-SDK';
 
 class Index extends BaseModule {
     constructor(props) {
@@ -19,8 +19,7 @@ class Index extends BaseModule {
     }
 
     events = {
-        // 完成tabbar切换工作
-        'app.changeTabbarModule': (param) => {
+        'app.changeToOrderModule': (param) => {
             let state = {activeKey: {key: param.nav}};
             if(param.tradeStatus){
                 state.tradeStatus = param.tradeStatus;
@@ -32,6 +31,12 @@ class Index extends BaseModule {
         }
     }
 
+    // getUrl(url, param) {
+    //     let hasParam = url.match(/\?/);
+    //     let query = QAP.uri.toQueryString(param);
+    //     return `${url}${hasParam ? '&' : '?'}${query}`;
+    // }
+
     menus = [
         {
             name: 'home',
@@ -41,13 +46,14 @@ class Index extends BaseModule {
         }, {
             name: 'order',
             title: '订单',
-            src: 'qap://order/index.js' + (this.state.tradeStatus ? '?tradeStatus=' + this.state.tradeStatus : ''),
+            // src: this.getUrl('qap://order/index.js', this.state.tradeStatus ? {tradeStatus: this.state.tradeStatus} : {}),
+            src: 'qap://order/index.js',
             icon: 'order'
         }
     ]
 
     componentWillMount() {
-        // this.bindEvent();
+        this.bindEvent();
     }
 
     getTabbarItem() {

@@ -17,7 +17,6 @@ class Home extends Component {
             <View style={styles.container}>
                 <UserInfo></UserInfo>
                 <CommonModule></CommonModule>
-                <CommonModule></CommonModule>
                 <QuickModule></QuickModule>
             </View>
         );

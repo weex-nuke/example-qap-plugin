@@ -1,0 +1,46 @@
+container{
+    margin-top: 10;
+}
+feedContainer{
+    background-color: #ffffff;
+    flex-direction: row;
+    border-bottom: 0.5px solid #eeeeee;
+    padding: 10;
+}
+feedImage{
+    width: 80;
+    height: 80;
+}
+feedContent{
+    flex: 1;
+    justify-content: space-between;
+    padding-right: 10;
+}
+feedTitle{
+    font-size: 14;
+    color: #333333;
+}
+feedInfo{
+    flex-direction: row;
+    justify-content: space-between;
+}
+feedData{
+    flex-direction: row;
+}
+feedFM{
+    color: #999999;
+    font-size: 10;
+}
+feedCount{
+    margin-left: 5;
+    margin-right: 5;
+    color: #999999;
+    font-size: 10;
+}
+feedIcon{
+    color: #999999;
+    font-size: 10;
+}
+feedDataItem{
+    flex-direction: row;
+}

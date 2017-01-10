@@ -12,47 +12,47 @@ class QuickModule extends Component {
     menus = [
         {
             name: 'diamond',
-            title: '自动评价',
+            title: '商品管理',
             icon: 'diamond',
-            color: 'rgb(252, 185, 67)'
+            color: '#fcb943'
         },{
             name: 'search',
-            title: '自动评价',
+            title: '促销管理',
             icon: 'search',
-            color: 'rgb(252, 133, 64)'
+            color: '#fc8540'
         },{
             name: 'paperplane',
-            title: '自动评价',
+            title: '订单管理',
             icon: 'paperplane',
-            color: 'rgb(102, 210, 95)'
+            color: '#66d25f'
         },{
             name: 'note',
-            title: '自动评价',
+            title: '流量推广',
             icon: 'note',
-            color: 'rgb(249, 137, 192)'
+            color: '#f989c0'
         },{
             name: 'calendar',
-            title: '自动评价',
+            title: '客户管理',
             icon: 'calendar',
-            color: 'rgb(75, 200, 245)'
+            color: '#4bc8f5'
         },{
             name: 'setting1',
-            title: '自动评价',
+            title: '货源采购',
             icon: 'setting1',
             color: '#EB7E10'
         }
         ,{
             name: 'evaluate',
-            title: '自动评价',
+            title: '金融服务',
             icon: 'evaluate',
             color: '#FF3333'
         },{
             name: 'msg',
-            title: '自动评价',
+            title: '店铺装修',
             icon: 'msg',
             color: '#368BD9'
         }
-        
+
     ]
 
     renderGridCell(item,index) {
@@ -69,7 +69,7 @@ class QuickModule extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.subtitle}><Text>实用工具</Text></View>
+                <View style={styles.subtitle}><IconFont iconStyle={styles.subicon} name='setting' /><Text style={styles.title}>特色专区</Text></View>
                 <MultiRow dataSource={this.menus} rows={4} renderRow={this.renderGridCell.bind(this)} />
             </View>
         );

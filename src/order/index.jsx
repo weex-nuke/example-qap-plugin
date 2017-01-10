@@ -20,7 +20,6 @@ class Order extends BaseModule {
 
     events = {
         'app.changeOrderSubModule': (status) => {
-            console.log(status)
             this.setState({activeKey: {key: status}})
         }
     }

@@ -15,7 +15,7 @@ class Index extends BaseModule {
         activeKey: {
             key: 'home'
         },
-        tradeStatus: ''
+        tradeStatus: 'waitPay'
     }
 
     events = {

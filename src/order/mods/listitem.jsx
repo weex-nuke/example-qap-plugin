@@ -1,6 +1,5 @@
 'use strict';
-import {mount} from 'nuke-mounter';
-import {createElement, Component} from 'weex-rx';
+import {createElement, Component,render} from 'rax';;
 import {View,ListView,Icon, Link , Text,TouchableHighlight, Modal,Image,Animated,Swipe} from 'nuke';
 import fetch from '$root/lib/fetch';
 import styles from './listitem.rxscss';

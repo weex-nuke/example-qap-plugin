@@ -1,4 +1,4 @@
-import {createElement, Component} from 'weex-rx';
+import {createElement, Component,render} from 'rax';;
 import QAP from 'QAP-SDK';
 import {uuid} from './util';
 

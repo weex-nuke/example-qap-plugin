@@ -7,11 +7,10 @@ var path = require('path');
 var _ = require('lodash');
 var webpack = require('webpack');
 var glob = require('glob');
-var RxPlugin = require('weex-rx-webpack-plugin');
+var RaxPlugin = require('rax-webpack-plugin');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 
-var componentName = 'Rxfietest',
-    srcPath = path.resolve(__dirname, './src'),
+var srcPath = path.resolve(__dirname, './src'),
     outputPath = path.resolve(__dirname, './build');
 
 
@@ -53,7 +52,8 @@ var config = {
         root: srcPath,
         extensions: ['', '.js', '.jsx'],
         alias: {
-            $root: srcPath
+            $root: srcPath,
+            'weex-rx':'rax'//此别名用于处理nuke@0.4.3版本时，还未切换rax的情况。
         }
     },
 
@@ -79,8 +79,8 @@ var config = {
 
     plugins: [
 
-        new RxPlugin(),
-        new webpack.BannerPlugin('// {"framework": "Rx"}', {raw: true}),
+        new RaxPlugin({target:'bundle'}),
+        new webpack.BannerPlugin('// {"framework": "Rax"}', {raw: true}),
 
         ////Webpack gives IDs to identify your modules. With this plugin,
         //// Webpack will analyze and prioritize often used modules assigning them the smallest ids.

@@ -1,6 +1,5 @@
 'use strict';
-import {mount} from 'nuke-mounter';
-import {createElement, Component} from 'weex-rx';
+import {createElement, Component,render} from 'rax';;
 import {View, Text, Modal, Tabbar} from 'nuke';
 import BaseModule from '$root/lib/baseModule';
 import IconFont from '$root/components/icon/iconFont';
@@ -98,7 +97,5 @@ const style = {
     }
 }
 
-mount(
-    <Index/>, 'body');
+render(<Index/>);
 
-export default Index;

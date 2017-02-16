@@ -1,4 +1,4 @@
-import {PropTypes, createElement} from 'weex-rx';
+import {PropTypes, createElement,render} from 'rax';;
 import BaseModule from '$root/lib/baseModule';
 import {Text} from 'nuke'
 import iconSource from './iconSource';

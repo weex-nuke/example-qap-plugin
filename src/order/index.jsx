@@ -1,6 +1,5 @@
 'use strict';
-import {createElement} from 'weex-rx';
-import {mount} from 'nuke-mounter';
+import {createElement,render} from 'rax';;
 import BaseModule from '$root/lib/baseModule';
 import {View, Text, Modal, Tabbar} from 'nuke';
 import IconFont from '$root/components/icon/iconFont';
@@ -79,7 +78,5 @@ const style = {
     }
 }
 
-mount(
-    <Order/>, 'body');
+render(<Order/>);
 
-export default Order;

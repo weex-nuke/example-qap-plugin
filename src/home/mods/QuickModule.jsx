@@ -1,5 +1,5 @@
 'use strict';
-import {createElement, Component} from 'weex-rx';
+import {createElement, Component,render} from 'rax';;
 import {View, Text, Badge,MultiRow,ScrollView} from 'nuke';
 import IconFont from '$root/components/icon/iconFont';
 import styles from './QuickModule.rxscss';

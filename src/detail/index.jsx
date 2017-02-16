@@ -1,6 +1,5 @@
 'use strict';
-import {mount} from 'nuke-mounter';
-import {createElement, Component} from 'weex-rx';
+import {createElement, Component,render} from 'rax';;
 import {ScrollView,Util} from 'nuke';
 import styles from './index.rxscss';
 import fetch from '$root/lib/fetch';
@@ -60,4 +59,4 @@ class Detail extends Component {
 }
 
 
-mount(<Detail />, 'body');
+render(<Detail />);

@@ -1,6 +1,5 @@
 'use strict';
-import {mount} from 'nuke-mounter';
-import {createElement, Component} from 'weex-rx';
+import {createElement, Component,render} from 'rax';;
 import {View, Text, ScrollView} from 'nuke';
 
 import CommonModule from './mods/CommonModule';
@@ -30,4 +29,4 @@ const styles = {
         backgroundColor: '#eeeeee'
     }
 };
-mount(<Home/>, 'body');
+render(<Home/>);

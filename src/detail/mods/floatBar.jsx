@@ -1,5 +1,5 @@
 'use strict';
-import {createElement, Component} from 'weex-rx';
+import {createElement, Component,render} from 'rax';;
 import {Button, Text, TouchableHighlight, Image, Link, Modal} from 'nuke';
 import styles from '../index.rxscss';
 import fetch from '$root/lib/fetch';

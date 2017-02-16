@@ -1,6 +1,5 @@
 'use strict';
-import {mount} from 'nuke-mounter';
-import {createElement, Component} from 'weex-rx';
+import {createElement, Component,render} from 'rax';;
 import {View,ListView,Icon, Text,TouchableHighlight, Modal,Image, RefreshControl,Animated,Swipe,Util} from 'nuke';
 import fetch from '$root/lib/fetch';
 import Top from '$root/lib/top';

@@ -1,6 +1,6 @@
 'use strict';
 import {View, Text, Badge, TouchableHighlight} from 'nuke';
-import {createElement} from 'weex-rx';
+import {createElement,render} from 'rax';;
 import BaseModule from '$root/lib/baseModule';
 import IconFont from '$root/components/icon/iconFont';
 import tradeType from '$root/modules/common/tradeType';

@@ -7,10 +7,10 @@
         "transform-decorators-legacy",
         ["transform-react-jsx", { "pragma": "createElement" }],
         ["transform-imports", {
-                "nuke": {
-                    "transform": "nuke/lib/${member}",
-                    "preventFullImport": true
-                },
+            "nuke": {
+                "transform": "nuke/lib/${member}",
+                "preventFullImport": true
+            },
         }]
     ]
 }

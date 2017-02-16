@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "QAP-SDK": "*",
-    "nuke": "0.4.x",
+    "nuke": "0.4.3",
     "nuke-mounter": "0.1.x"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-$fontSize:30rem;
+@fontSize:30rem;
 .detail{
     
     background-color: #cccccc;
@@ -11,7 +11,7 @@ $fontSize:30rem;
 }
 .addressContainer{
     background-color: #ffffff;
-    border-top:1px solid #cccccc;
+    border-top:1rem solid #cccccc;
     padding-left:20rem;
     padding-right:20rem;
     margin-bottom:20rem;
@@ -19,20 +19,16 @@ $fontSize:30rem;
 
 .listLine{
     flex-direction: row;
-    
-    border-bottom:1px solid #cccccc;
-    // line-height: 48rem
+    border-bottom:1rem solid #cccccc;
     
 }
 .listLineLast{
-    border-bottom:0px solid #cccccc;
+    border-bottom:0 solid #cccccc;
 }
 .subhead{
-    // justify-content: center;
     align-items: center;
     flex-direction: row;
     height: 78rem;
-    // border-bottom:1px solid #cccccc;
 }
 .icon1{
     font-size: 34rem;
@@ -40,7 +36,7 @@ $fontSize:30rem;
     color: #EB7E10;
 }
 .btnLine{
-    padding:20px 0;
+    padding:40rem 0;
 }
 .listLabel{
     flex:3;
@@ -49,7 +45,7 @@ $fontSize:30rem;
     align-items: center;
 }
 .listLabelText{
-    font-size: $fontSize;
+    font-size: @fontSize;
 }
 .listContent{
     flex:8;
@@ -57,28 +53,27 @@ $fontSize:30rem;
     height: 68rem;
 }
 .listContentText{
-    font-size: $fontSize;
+    font-size: @fontSize;
 }
 
 .address{
     flex:8;
     justify-content: center;
     padding:12rem 0;
-    // align-items: center;
-    //  min-height: 68rem;
-     line-height: 24rem;
-     lines:5;
-    font-size: $fontSize;
+    line-height: 24rem;
+    lines:5;
+    font-size: @fontSize;
 }
 .itemContainer {
     background-color: #ffffff;
-    border-top:1px solid #cccccc;
-   
+    border-top:1rem solid #cccccc;
+    padding-left:20rem;
+    padding-right:20rem;
     margin-bottom:100rem;
 }
 .itemLine {
     flex-direction: row;
-    border-bottom:1px solid #cccccc;
+    border-bottom:1rem solid #cccccc;
     padding-bottom:30rem;
 }
 .picWrap {
@@ -109,7 +104,7 @@ $fontSize:30rem;
 .title{
     lines:5;
     color: #333333;
-    font-size:$fontSize;
+    font-size:@fontSize;
 }
 
 .price{

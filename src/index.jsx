@@ -82,12 +82,12 @@ class Index extends BaseModule {
 
 const style = {
     itemStyle: {
-        borderTopWidth: '1px',
+        borderTopWidth: '1rem',
         borderTopStyle: 'solid',
         borderTopColor: '#ccc'
     },
     icon: {
-        fontSize: 48
+        fontSize: '48rem'
     },
     itemUnSelectorColor: {
         color: '#3d4145'

@@ -1,0 +1,43 @@
+@import "../../lib/base.css";
+
+.container {
+    background-color: #ffffff;
+
+    margin-top: 20;
+}
+.itemStyle {
+    border-top: 1rem solid #cccccc;
+}
+.icon {
+    font-size: 32rem;
+    color: #ffffff;
+}
+.subicon{
+    font-size: 24rem;
+    color: #333333;
+}
+.module {
+    width: 187;
+    align-items: center;
+    margin-bottom: 40;
+}
+.item {
+    padding: 10;
+    border-radius: 20;
+    margin-bottom: 10;
+}
+.subtitle{
+    border-bottom:1rem solid #e3e3e3;
+    padding-left: 20;
+    padding-top: 20;
+    padding-bottom: 20;
+    margin-bottom: 20;
+    flex-direction: row;
+    flex: 1;
+}
+
+.title{
+    font-size: 24rem;
+    color: #333333;
+    margin-left: 10;
+}

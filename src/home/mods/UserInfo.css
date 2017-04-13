@@ -1,0 +1,17 @@
+@import "../../lib/base.css";
+.container {
+    background-color: #ffffff;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20;
+    padding-top: 20;
+    padding-bottom: 20;
+    height: 160;
+    border-bottom: 1rem solid #cccccc;
+}
+.img {
+    width: 120;
+    height: 120;
+    border-radius: 60;
+    margin-right: 20;
+}

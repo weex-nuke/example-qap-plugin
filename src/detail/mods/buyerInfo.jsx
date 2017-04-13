@@ -1,7 +1,7 @@
 'use strict';
 import {createElement, Component,render} from 'rax';;
 import {View, ScrollView,Button, Text, TouchableHighlight, Image, Link, Modal,Util,Icon} from 'nuke';
-import styles from '../index.rxscss';
+import styles from '../index.less';
 import fetch from '$root/lib/fetch';
 
 class BuyerInfo extends Component {

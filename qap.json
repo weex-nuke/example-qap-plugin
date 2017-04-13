@@ -1,27 +1,30 @@
 {
-	"appKey":"23589095",
-	"version":"1.0",
-	"pages":[
-		{
-			"default":true,
-			"cabability":"itemChoose",
-			"url":"qap://index.js"
-		},
-		{
-			"url":"qap://home/index.js"
-		},
-		{
-			"url":"qap://detail/index.js"
-		},
-		{
-			"url":"qap://order/index.js"
-		}
-	],
-	"iconfonts":[
-		{
-			"localpath":"font_1474198576_7440977.ttf",
-			"url":"http://at.alicdn.com/t/font_1474198576_7440977.ttf"
-		}
-	],
-	"WebRootPath":"https://www.taobao.com/"
+  "appKey": "23589095",
+  "version": "1.0",
+  "pages": [
+    {
+      "default": true,
+      "cabability": "itemChoose",
+      "url": "qap:///index.js"
+    },
+    {
+      "url": "qap:///home/index.js"
+    },
+    {
+      "url": "qap:///detail/index.js"
+    },
+    {
+      "url": "qap:///order/index.js"
+    }
+  ],
+  "iconfonts": [
+    {
+      "localpath": "font_1474198576_7440977.ttf",
+      "url": "http://at.alicdn.com/t/font_1474198576_7440977.ttf"
+    }
+  ],
+  "WebRootPath": "https://www.taobao.com/",
+  "min_qn_android": "5.8.8",
+  "min_qn_ios": "5.8.2",
+  "jssdk": "1.0.14"
 }

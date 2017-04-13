@@ -3,7 +3,7 @@ import {createElement, Component,render} from 'rax';;
 import {View, Text, Image} from 'nuke';
 import IconFont from '$root/components/icon/iconFont';
 import fetch from '$root/lib/fetch';
-import styles from './FeedModule.rxscss';
+import styles from './FeedModule.css';
 
 class FeedModule extends Component {
     constructor(props) {

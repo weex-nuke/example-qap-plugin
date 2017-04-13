@@ -2,7 +2,7 @@
 import {createElement, Component,render} from 'rax';;
 import {View,ListView,Icon, Link , Text,TouchableHighlight, Modal,Image,Animated,Swipe} from 'nuke';
 import fetch from '$root/lib/fetch';
-import styles from './listitem.rxscss';
+import styles from './listitem.css';
 
 const tradeTypeMap = {
     0: {
@@ -21,13 +21,13 @@ class ListItem extends Component {
     }
 
     render(){
-        const { pic_path, sku_properties_name, title, price, num , tid, buyer_nick, buyer_name, buyer_phone, buyer_addr, buyer_avatar, order_time, order_id, order_status} = this.props.item;
+        const { pic_path, sku_properties_name, title, price, num , buyer_nick, buyer_name, buyer_phone, buyer_addr, buyer_avatar, order_time, order_id, order_status} = this.props.item;
+        console.log(order_id);
         return (
-           <Link style={styles.orderContainer} href={`qap://detail/index.js?id=${tid}`} target="_blank">
+           <Link style={styles.orderContainer} href={`qap://detail/index.js?id=${order_id}`} target="_blank">
                 <View style={styles.rowlayout}>
                     <Text style={styles[tradeTypeMap[order_status].clazz]}>{tradeTypeMap[order_status].type}</Text>
-                    <Text style={styles.minor}>|</Text>
-                    <Text style={styles.minor}>{order_time}</Text>
+                    <Text style={styles.minor}>| {order_time}</Text>
                     <Text style={[styles.minor, styles.orderId]}>{order_id}</Text>
                 </View>
                 <View style={[styles.rowlayout, styles.userPay]}>

@@ -8,7 +8,7 @@
         ["transform-react-jsx", { "pragma": "createElement" }],
         ["transform-imports", {
             "nuke": {
-                "transform": "nuke/lib/${member}",
+                "transform": "nuke/lib/${member}/index.js",
                 "preventFullImport": true
             },
         }]

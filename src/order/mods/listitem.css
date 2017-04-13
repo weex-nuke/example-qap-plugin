@@ -2,30 +2,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 5;
-    border-bottom: 5px solid #dddddd;
-    background: #fff;
+    padding: 40;
+    border-bottom: 20rem solid #dddddd;
+    background-color: #ffffff;
 }
 .avatar{
-    width: 16;
-    height: 16;
+    width: 32rem;
+    height: 32rem;
 }
 .success{
-    font-size: 12;
+    font-size: 26rem;
     color: #0bb951;
 }
 .close{
-    font-size: 12;
+    font-size: 26rem;
     color: #cb1515;
 }
 .orderId{
-margin-left: 5;
+    margin-left: 20;
 }
 .rowlayout{
     flex-direction: row;
-    padding-bottom: 5;
-    border-bottom: 0.5px solid #eeeeee;
-    margin-bottom: 5;
+    padding-bottom: 20;
+    border-bottom: 1rem solid #eeeeee;
+    margin-bottom: 20;
     flex: 1;
 }
 .itemLayout{
@@ -37,27 +37,27 @@ margin-left: 5;
 }
 .minor{
     color: #999999;
-    font-size: 12;
+    font-size: 26rem;
+    margin:0 8rem;
 }
 .primary{
     color: #333333;
-    font-size: 12;
+    font-size: 26rem;
 }
 .itemPrice{
-    width: 80;
+    width: 160;
 }
 .userPay{
     justify-content: space-between;
 }
 .pic{
-    width: 86;
-    height: 86;
-    flex: none;
+    width: 172;
+    height: 172;
 }
 .itemInfo{
-    padding-left: 5;
-    padding-right: 5;
+    padding-left: 20;
+    padding-right: 20;
 }
 .itemTitle{
-    padding-bottom: 5;
+    padding-bottom: 20;
 }

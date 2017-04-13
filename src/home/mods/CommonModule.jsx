@@ -4,14 +4,14 @@ import {createElement,render} from 'rax';;
 import BaseModule from '$root/lib/baseModule';
 import IconFont from '$root/components/icon/iconFont';
 import tradeType from '$root/modules/common/tradeType';
-import styles from './CommonModule.rxscss';
+import styles from './CommonModule.css';
 
 class CommonModule extends BaseModule {
     constructor(props) {
         super(props);
     }
 
-    menus = tradeType.map(item => Object.assign(item, {count: 0}))
+    menus = tradeType.map(item => Object.assign(item, {count: 10}))
     press(name) {
         this.emitEvent('app.changeToOrderModule', {nav: 'order', tradeStatus: name});
         this.emitEvent('app.changeOrderSubModule', name);

@@ -1,7 +1,7 @@
 'use strict';
 import {createElement, Component,render} from 'rax';;
 import {View, Text, Image} from 'nuke';
-import styles from './UserInfo.rxscss';
+import styles from './UserInfo.css';
 import fetch from '$root/lib/fetch';
 
 class UserInfo extends Component {

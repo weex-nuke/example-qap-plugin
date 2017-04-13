@@ -1,11 +1,11 @@
-import {PropTypes, createElement,render} from 'rax';;
+import {PropTypes, createElement,render} from 'rax';
 import BaseModule from '$root/lib/baseModule';
 import {Text} from 'nuke'
 import iconSource from './iconSource';
 
 class IconFont extends BaseModule {
 
-    static protTypes = {
+    static propTypes = {
         name: PropTypes.string
     }
 
@@ -25,7 +25,7 @@ class IconFont extends BaseModule {
 
 const styles = {
     icon: {
-        fontFamily: 'iconfont',
+        fontFamily: 'iconsforyourapp',
         textAlign: 'center'
     }
 }

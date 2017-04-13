@@ -4,13 +4,17 @@
  */
 
 var path = require('path');
+var os = require('os');
 var _ = require('lodash');
 var webpack = require('webpack');
+var HappyPack = require('happypack');
+var happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length + 2});
 var glob = require('glob');
 var RaxPlugin = require('rax-webpack-plugin');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 
-var srcPath = path.resolve(__dirname, './src'),
+var componentName = 'Rxfietest',
+    srcPath = path.resolve(__dirname, './src'),
     outputPath = path.resolve(__dirname, './build');
 
 
@@ -23,7 +27,7 @@ function getDevEntry(cwd) {
 
     var entry = {};
     glob.sync('{*.jsx,*/*.jsx}', { cwd: cwd }).forEach(function(item, i) {
-        var file = item.replace('.jsx','');
+        var file = item.replace('.jsx', '');
         entry[file] = [
             item
         ];
@@ -51,37 +55,72 @@ var config = {
     resolve: {
         root: srcPath,
         extensions: ['', '.js', '.jsx'],
-        alias: {
-            $root: srcPath,
-            'weex-rx':'rax'//此别名用于处理nuke@0.4.3版本时，还未切换rax的情况。
+        alias:{
+            $root: srcPath
         }
+
     },
 
+    // "externals": [{
+    //     "rax": "commonjs rax",
+    //     "nuke": "commonjs nuke",
+    //     "QAP-SDK": "commonjs QAP-SDK",
+    // }],
 
     module: {
-        // preLoaders: [{
-        //     test: /\.(js|jsx)$/,
-        //     exclude: path.resolve(__dirname, "node_modules"),
-        //     loader: 'eslint'
-        // }, ],
-
         loaders: [{
             test: /\.(js|jsx)$/,
             include: [
                 path.resolve(__dirname, "src")
             ],
-            loaders: ['babel']
+            loaders: ['babel?cacheDirectory=true']
         }, {
-            test: /\.(rxscss|scss)$/,
-            loader: 'rx-css-loader!fast-sass'
+            test: /\.css$/,
+            loader: 'stylesheet',
+            include: [
+                path.resolve(__dirname, "src"),
+            ]
+        }, {
+            test: /\.less$/,
+            loader: 'stylesheet!less',
+            include: [
+                path.resolve(__dirname, "src"),
+            ]
+        },{
+            test: /\.json$/,
+            loader: 'json-loader'
         }]
     },
 
     plugins: [
 
-        new RaxPlugin({target:'bundle'}),
-        new webpack.BannerPlugin('// {"framework": "Rax"}', {raw: true}),
+        new HappyPack({
+            cache: true,
+            debug: true,
+            id: 'js',
+            loaders: ['babel?cacheDirectory=true'],
+            threadPool: happyThreadPool
+        }),
 
+        new HappyPack({
+            cache: true,
+            debug: true,
+            id: 'css',
+            loaders: ['stylesheet'],
+            threadPool: happyThreadPool
+        }),
+
+        new HappyPack({
+            cache: true,
+            debug: true,
+            id: 'less',
+            loaders: ['stylesheet!less'],
+            threadPool: happyThreadPool
+        }),
+
+        new RaxPlugin({
+            target: 'bundle'
+        }),
         ////Webpack gives IDs to identify your modules. With this plugin,
         //// Webpack will analyze and prioritize often used modules assigning them the smallest ids.
         new webpack.optimize.OccurenceOrderPlugin(),
@@ -94,6 +133,7 @@ var config = {
                 stream.write(`📦   ${msg}`);
                 stream.clearLine(1);
             }
+            process.send && process.send({percentage:percentage, msg:msg});
         })
     ]
 };
@@ -120,7 +160,7 @@ function dev() {
     );
 
     //添加soure-map
-    _config.devtool = 'source-map';
+    _config.devtool = 'inline-source-map';
 
     return _config;
 }
@@ -152,7 +192,8 @@ function prod() {
             minimize: true,
             compress: { warnings: false, drop_console: true },
             output: { comments: false }
-        })
+        }),
+        new webpack.BannerPlugin('// {"framework": "Rax"}', {raw: true})
 
     );
 

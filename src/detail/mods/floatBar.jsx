@@ -1,7 +1,7 @@
 'use strict';
 import {createElement, Component,render} from 'rax';;
 import {Button, Text, TouchableHighlight, Image, Link, Modal} from 'nuke';
-import styles from '../index.rxscss';
+import styles from '../index.less';
 import fetch from '$root/lib/fetch';
 
 class ItemInfo extends Component {

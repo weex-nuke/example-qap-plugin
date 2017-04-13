@@ -1,5 +1,5 @@
 import {Iconfont} from 'nuke';
-Iconfont({name: 'iconfont', url: 'http://at.alicdn.com/t/font_w0iu3docuw4mfgvi.ttf'});
+Iconfont({name: 'iconsforyourapp', url: 'https://at.alicdn.com/t/font_w0iu3docuw4mfgvi.ttf'});
 
 export default {
     // 设置

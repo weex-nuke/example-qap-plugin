@@ -1,7 +1,7 @@
 'use strict';
 import {createElement, Component,render} from 'rax';;
 import {ScrollView,Util} from 'nuke';
-import styles from './index.rxscss';
+import styles from './index.less';
 import fetch from '$root/lib/fetch';
 import BuyerInfo from './mods/buyerInfo';
 import ItemInfo from './mods/itemInfo';

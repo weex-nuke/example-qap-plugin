@@ -1,0 +1,32 @@
+@import "../../lib/base.css";
+
+.container {
+    background-color: #fff;
+    flex-direction: row;
+    height: 200rem;
+}
+.item{
+    height: 200rem;
+    width: 150rem;
+    align-items: center;
+    justify-content: center;
+}
+.itemStyle {
+    border-top: 1rem solid #cccccc;
+}
+.icon {
+    font-size: 48rem;
+}
+.badge {
+    position: absolute;
+    width: 40;
+    height: 40;
+    border-radius: 20;
+    right: 32;
+    top: 40;
+    background-color: red;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

@@ -1,7 +1,7 @@
 export default [{
     name: 'waitPay',
     title: '待付款',
-    icon: 'order',
+    icon: 'note',
     
 }, {
     name: 'waitSend',

@@ -5,7 +5,7 @@ import fetch from '$root/lib/fetch';
 import Top from '$root/lib/top';
 import QN from 'QAP-SDK';
 import ListItem from './listitem'
-import styles from './orderlist.rxscss'
+import styles from './orderlist.css'
 const Location = Util.Location;
 let listData = [];
 // for (var i = 0; i < 30; i++) {

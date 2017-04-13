@@ -19,7 +19,7 @@
     background-color:#cccccc;
     justify-content:center;
     align-items:center;
-};
+}
 .loading{
     height:80rem;
     display:flex;
@@ -28,7 +28,7 @@
     background-color:#cccccc;
     align-items:center;
     justify-content:center
-};
+}
 .loadingText{
     color:#666666
 }

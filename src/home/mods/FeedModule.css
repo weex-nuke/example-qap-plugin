@@ -1,0 +1,46 @@
+.container{
+    margin-top: 10;
+}
+.feedContainer{
+    background-color: #ffffff;
+    flex-direction: row;
+    border-bottom: 1rem solid #eeeeee;
+    padding: 20rem;
+}
+.feedImage{
+    width: 160;
+    height: 160;
+}
+.feedContent{
+    flex: 1;
+    justify-content: space-between;
+    padding-right: 20;
+}
+.feedTitle{
+    font-size: 28;
+    color: #333333;
+}
+.feedInfo{
+    flex-direction: row;
+    justify-content: space-between;
+}
+.feedData{
+    flex-direction: row;
+}
+.feedFM{
+    color: #999999;
+    font-size: 20;
+}
+.feedCount{
+    margin-left: 10;
+    margin-right: 10;
+    color: #999999;
+    font-size: 20;
+}
+.feedIcon{
+    color: #999999;
+    font-size: 20;
+}
+.feedDataItem{
+    flex-direction: row;
+}

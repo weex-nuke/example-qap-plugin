@@ -1,6 +1,6 @@
 {
-  "appKey": "23589095",
-  "version": "1.0",
+  "appKey": "23588507",
+  "version": "2.0",
   "pages": [
     {
       "default": true,
@@ -19,8 +19,8 @@
   ],
   "iconfonts": [
     {
-      "localpath": "font_1474198576_7440977.ttf",
-      "url": "http://at.alicdn.com/t/font_1474198576_7440977.ttf"
+      "localpath": "font_w0iu3docuw4mfgvi.ttf",
+      "url": "https://at.alicdn.com/t/font_w0iu3docuw4mfgvi.ttf"
     }
   ],
   "WebRootPath": "https://www.taobao.com/",

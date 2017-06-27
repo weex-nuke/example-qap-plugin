@@ -5,7 +5,7 @@ import {View, Text, ScrollView} from 'nuke';
 import CommonModule from './mods/CommonModule';
 import QuickModule from './mods/QuickModule';
 import UserInfo from './mods/UserInfo';
-import FeedModule from './mods/FeedModule';
+import AppInfo from './mods/AppInfo';
 
 class Home extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class Home extends Component {
                 <UserInfo></UserInfo>
                 <CommonModule></CommonModule>
                 <QuickModule></QuickModule>
-                <FeedModule></FeedModule>
+                <AppInfo></AppInfo>
             </ScrollView>
         );
     }

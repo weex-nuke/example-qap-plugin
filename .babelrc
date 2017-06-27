@@ -5,12 +5,6 @@
         "transform-react-display-name",
         "transform-class-properties",
         "transform-decorators-legacy",
-        ["transform-react-jsx", { "pragma": "createElement" }],
-        ["transform-imports", {
-            "nuke": {
-                "transform": "nuke/lib/${member}/index.js",
-                "preventFullImport": true
-            },
-        }]
+        ["transform-react-jsx", { "pragma": "createElement" }]
     ]
 }

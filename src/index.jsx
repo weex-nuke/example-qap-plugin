@@ -30,11 +30,6 @@ class Index extends BaseModule {
         }
     }
 
-    // getUrl(url, param) {
-    //     let hasParam = url.match(/\?/);
-    //     let query = QAP.uri.toQueryString(param);
-    //     return `${url}${hasParam ? '&' : '?'}${query}`;
-    // }
 
     menus = [
         {
@@ -45,7 +40,6 @@ class Index extends BaseModule {
         }, {
             name: 'order',
             title: '订单',
-            // src: this.getUrl('qap://order/index.js', this.state.tradeStatus ? {tradeStatus: this.state.tradeStatus} : {}),
             src: 'qap://order/index.js',
             icon: 'order'
         }
@@ -63,7 +57,7 @@ class Index extends BaseModule {
                     return (
                         <View>
                             <View><IconFont iconStyle={[style.icon, color]} name={menu.icon}/></View>
-                            <Text style={color}>{menu.title}</Text>
+                            <Text style={[style.text,color]}>{menu.title}</Text>
                         </View>
                     )
                 }} title={menu.title} tabKey={menu.name} src={menu.src}></Tabbar.Item>
@@ -87,10 +81,13 @@ const style = {
         borderTopColor: '#ccc'
     },
     icon: {
-        fontSize: '48rem'
+        fontSize: '28rem'
     },
     itemUnSelectorColor: {
         color: '#3d4145'
+    },
+    text:{
+        fontSize: '28rem'
     },
     itemSelectorColor: {
         color: '#0894ec'

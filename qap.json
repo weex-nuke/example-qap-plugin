@@ -1,6 +1,6 @@
 {
   "appKey": "23588507",
-  "version": "2.0",
+  "version": "2.0.1",
   "pages": [
     {
       "default": true,
@@ -24,7 +24,7 @@
     }
   ],
   "WebRootPath": "https://www.taobao.com/",
-  "min_qn_android": "5.8.8",
+  "min_qn_android": "5.8.2",
   "min_qn_ios": "5.8.2",
-  "jssdk": "1.0.14"
+  "jssdk": "1.0.19"
 }

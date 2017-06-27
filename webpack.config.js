@@ -61,11 +61,11 @@ var config = {
 
     },
 
-    // "externals": [{
-    //     "rax": "commonjs rax",
-    //     "nuke": "commonjs nuke",
-    //     "QAP-SDK": "commonjs QAP-SDK",
-    // }],
+    "externals": [{
+        "rax": "commonjs rax",
+        "nuke": "commonjs nuke",
+        "QAP-SDK": "commonjs QAP-SDK",
+    }],
 
     module: {
         loaders: [{

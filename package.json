@@ -1,6 +1,6 @@
 {
-  "name": "demo",
-  "version": "0.1.0",
+  "name": "example-qap-plugin",
+  "version": "2.0.1",
   "readmeFilename": "README.md",
   "scripts": {
     "start": "./node_modules/.bin/gulp start",
@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "QAP-SDK": "^1.0.11",
-    "nuke": "^0.6.31",
-    "rax": "^0.2.11"
+    "nuke": "^0.6.60",
+    "rax": "^0.3.8"
   },
   "devDependencies": {
     "babel-cli": "~6.7.5",
